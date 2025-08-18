@@ -5,9 +5,9 @@ import heroImage from '@/assets/hero-biosecurity.jpg';
 
 const Hero = () => {
   const benefits = [
-    'Respaldo técnico certificado',
-    'Empresa SAS BIC (Beneficio social)',
-    'Experiencia en Casanare',
+    'Soluciones técnicas certificadas',
+    'Atención inmediata en Casanare',
+    'Resultados garantizados',
   ];
 
   return (

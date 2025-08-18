@@ -34,14 +34,14 @@ const About = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 bg-secondary-light text-secondary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Quiénes somos
+            Nuestra empresa
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Experiencia técnica con <span className="text-primary">compromiso social</span>
+            <span className="text-primary">15 años</span> liderando la bioseguridad en Casanare
           </h2>
           <p className="text-xl text-muted-foreground">
-            Somos una empresa SAS BIC (Sociedad de Beneficio e Interés Colectivo) comprometida 
-            con la excelencia técnica y el impacto social positivo en Casanare.
+            Empresa SAS BIC con Ingeniera de Alimentos certificada, brindando soluciones 
+            técnicas especializadas para la industria regional.
           </p>
         </div>
 
@@ -62,16 +62,15 @@ const About = () => {
           {/* Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold">Respaldo técnico y compromiso social</h3>
+              <h3 className="text-2xl font-bold">Fundada por expertos, impulsada por resultados</h3>
               <p className="text-muted-foreground">
-                Con más de 15 años de experiencia en el sector, GEMAS Ingeniería se ha consolidado 
-                como una empresa líder en bioseguridad, inocuidad y control de plagas en la región 
-                de Casanare.
+                Liderada por una Ingeniera de Alimentos con registro ICA y certificaciones HACCP, 
+                hemos construido una sólida reputación atendiendo empresas petroleras, hospitales, 
+                restaurantes y sectores agroindustriales.
               </p>
               <p className="text-muted-foreground">
-                Nuestro equipo está liderado por una Ingeniera de Alimentos con amplia experiencia 
-                en el sector industrial, respaldada por certificaciones técnicas y un compromiso 
-                inquebrantable con la calidad y el servicio.
+                Como empresa SAS BIC, combinamos rentabilidad con impacto social positivo, 
+                generando empleo local y contribuyendo al desarrollo sostenible de Casanare.
               </p>
             </div>
 
