@@ -45,6 +45,16 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    /* Professional gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(142 80% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(210 100% 55%));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(220 13% 98%));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-icon: 0 8px 25px -8px hsl(var(--primary) / 0.3);
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
