@@ -17,18 +17,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 20%;
 
-    /* GEMAS Brand Colors */
-    --primary: 142 80% 35%; /* Verde profesional */
+    /* TarjetasPlus Brand Colors */
+    --primary: 210 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 142 60% 95%;
+    --primary-glow: 210 100% 60%;
 
-    --secondary: 210 100% 45%; /* Azul corporativo */
+    --secondary: 156 100% 45%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 210 60% 95%;
 
-    --accent: 45 95% 55%; /* Amarillo CTA */
-    --accent-foreground: 220 15% 20%;
-    --accent-hover: 45 95% 45%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --muted: 220 13% 96%;
     --muted-foreground: 220 9% 46%;
@@ -41,19 +39,22 @@ All colors MUST be HSL.
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 142 80% 35%;
+    --ring: 210 100% 50%;
 
     --radius: 0.5rem;
 
-    /* Professional gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(142 80% 45%));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(210 100% 55%));
+    /* TarjetasPlus Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(var(--secondary) / 0.9));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted) / 0.3));
     --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(220 13% 98%));
     
-    /* Shadows */
+    /* TarjetasPlus Shadows */
     --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-icon: 0 8px 25px -8px hsl(var(--primary) / 0.3);
+    --shadow-primary: 0 8px 25px -8px hsl(var(--primary) / 0.3);
+    --shadow-secondary: 0 8px 25px -8px hsl(var(--secondary) / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
@@ -111,12 +112,17 @@ All colors MUST be HSL.
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%23000000' fill-opacity='0.03'%3e%3ccircle cx='7' cy='7' r='1'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
   }
-
-  body {
-    @apply bg-background text-foreground;
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
   }
 }
