@@ -1,18 +1,26 @@
 import React from 'react';
-import TPHeader from '@/components/TPHeader';
-import TPHero from '@/components/TPHero';
-import TPFeatures from '@/components/TPFeatures';
-import TPBenefits from '@/components/TPBenefits';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Services from '@/components/Services';
+import Clients from '@/components/Clients';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <TPHeader />
+      <Header />
       <main>
-        <TPHero />
-        <TPFeatures />
-        <TPBenefits />
+        <Hero />
+        <About />
+        <Services />
+        <Clients />
+        <Contact />
       </main>
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
