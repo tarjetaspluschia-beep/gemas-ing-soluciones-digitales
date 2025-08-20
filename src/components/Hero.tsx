@@ -2,23 +2,12 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
 import heroImage from '@/assets/hero-biosecurity.jpg';
-
 const Hero = () => {
-  const benefits = [
-    'Soluciones técnicas certificadas',
-    'Atención inmediata en Casanare',
-    'Resultados garantizados',
-  ];
-
-  return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-20">
+  const benefits = ['Soluciones técnicas certificadas', 'Atención inmediata en Casanare', 'Resultados garantizados'];
+  return <section id="inicio" className="relative min-h-screen flex items-center pt-20">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Laboratorio de bioseguridad GEMAS"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Laboratorio de bioseguridad GEMAS" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60"></div>
       </div>
 
@@ -47,12 +36,10 @@ const Hero = () => {
 
             {/* Benefits */}
             <div className="space-y-3">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3">
+              {benefits.map((benefit, index) => <div key={index} className="flex items-center gap-3">
                   <CheckCircle className="h-5 w-5 text-success" />
                   <span className="text-foreground font-medium">{benefit}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* CTA Buttons */}
@@ -69,7 +56,7 @@ const Hero = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">15+</div>
+                <div className="text-2xl font-bold text-primary">5+</div>
                 <div className="text-sm text-muted-foreground">Años de experiencia</div>
               </div>
               <div className="text-center">
@@ -84,8 +71,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
