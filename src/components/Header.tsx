@@ -34,9 +34,11 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary">
-              GEMAS <span className="text-secondary">INGENIERÍA</span>
-            </div>
+            <img 
+              src="/lovable-uploads/dc81770e-e27e-4c58-a256-9a988e6fc8db.png" 
+              alt="GEMAS Ingeniería SAS BIC" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
