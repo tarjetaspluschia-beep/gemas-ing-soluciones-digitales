@@ -26,7 +26,7 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <span>+57 350 123 4567</span>
+              <span>+57 3</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
@@ -51,7 +51,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="cta" size="lg" className="text-blue-700">
+            <Button variant="cta" size="lg" className="bg-yellow-600 hover:bg-yellow-500 text-slate-50">
               Solicitar asesoría
             </Button>
           </div>
