@@ -31,8 +31,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Teléfono',
-      info: '+57 311 220 5499',
-      action: 'tel:+573112205499',
+      info: '+57 3112295449',
+      action: 'tel:+573112295449',
     },
     {
       icon: Mail,
