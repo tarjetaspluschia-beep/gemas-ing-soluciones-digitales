@@ -209,17 +209,27 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Map Placeholder */}
+            {/* Map */}
             <Card className="border-0 shadow-md">
               <CardContent className="p-0">
-                <div className="bg-muted h-64 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-muted-foreground">
-                      Mapa de ubicación en Tauramena, Casanare
-                    </p>
+                <a 
+                  href="https://share.google/DzIlrTL97l4N8e42t" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block bg-muted h-64 rounded-lg hover:bg-muted/80 transition-colors cursor-pointer"
+                >
+                  <div className="h-full flex items-center justify-center">
+                    <div className="text-center">
+                      <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
+                      <p className="text-muted-foreground font-medium">
+                        Ver ubicación en Google Maps
+                      </p>
+                      <p className="text-sm text-muted-foreground/80 mt-1">
+                        Carrera 16 No 3-29 Tauramena, Casanare
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </CardContent>
             </Card>
           </div>
