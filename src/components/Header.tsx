@@ -57,22 +57,39 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button 
+            className="md:hidden p-2 rounded-md hover:bg-accent focus:outline-none focus:ring-2 focus:ring-primary"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && <div className="md:hidden py-4 border-t">
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t bg-background">
             <nav className="flex flex-col gap-4">
-              {navigation.map(item => <a key={item.name} href={item.href} className="text-foreground hover:text-primary transition-colors duration-200 font-medium" onClick={() => setIsMenuOpen(false)}>
+              {navigation.map(item => (
+                <a 
+                  key={item.name} 
+                  href={item.href} 
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium py-2 px-2 rounded-md hover:bg-accent"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {item.name}
-                </a>)}
-              <Button variant="cta" className="mt-4">
+                </a>
+              ))}
+              <Button 
+                variant="cta" 
+                className="mt-4 w-full bg-yellow-600 hover:bg-yellow-500 text-slate-50"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Solicitar asesoría
               </Button>
             </nav>
-          </div>}
+          </div>
+        )}
       </div>
     </header>;
 };
