@@ -31,8 +31,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Teléfono',
-      info: '+57 350 123 4567',
-      action: 'tel:+573501234567',
+      info: '+57 311 220 5499',
+      action: 'tel:+573112205499',
     },
     {
       icon: Mail,
@@ -58,7 +58,7 @@ const Contact = () => {
     const message = encodeURIComponent(
       `Hola, me gustaría obtener más información sobre los servicios de GEMAS Ingeniería:\n\nNombre: ${formData.name}\nEmpresa: ${formData.company}\nEmail: ${formData.email}\nTeléfono: ${formData.phone}\n\nMensaje: ${formData.message}`
     );
-    window.open(`https://wa.me/573501234567?text=${message}`, '_blank');
+    window.open(`https://wa.me/573112205499?text=${message}`, '_blank');
   };
 
   return (
