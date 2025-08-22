@@ -85,7 +85,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="cta" size="lg" className="bg-yellow-600 hover:bg-yellow-500 text-slate-50">
+            <Button variant="hero" size="lg">
               Solicitar asesoría
             </Button>
           </div>
@@ -126,8 +126,8 @@ const Header = () => {
                 )
               )}
               <Button 
-                variant="cta" 
-                className="mt-4 w-full bg-yellow-600 hover:bg-yellow-500 text-slate-50"
+                variant="hero" 
+                className="mt-4 w-full"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Solicitar asesoría

@@ -76,7 +76,11 @@ const Hero = () => {
                 Contáctanos ahora
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Ver nuestros servicios
               </Button>
             </div>
