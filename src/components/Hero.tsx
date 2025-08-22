@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
-import heroImage from '@/assets/hero-biosecurity.jpg';
 const Hero = () => {
   const benefits = ['Soluciones técnicas certificadas', 'Atención inmediata en Casanare', 'Resultados garantizados'];
+  
+  const heroImages = [
+    '/lovable-uploads/345111ec-6696-4d67-a406-101a0e91c7d0.png',
+    '/lovable-uploads/85399eee-5fb2-479c-a257-5c6acc1320bc.png',
+    '/lovable-uploads/66c0334b-6ecd-4ee3-b177-e3bbd4fd7f28.png',
+    '/lovable-uploads/58d8bc2a-e8a6-4022-9052-851aa503fd89.png',
+    '/lovable-uploads/32914c0b-5a6f-4733-a29e-ebba6f445eb4.png'
+  ];
+  
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 4000); // Cambia imagen cada 4 segundos
+    
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
   return <section id="inicio" className="relative min-h-screen flex items-center pt-20">
-      {/* Background image */}
+      {/* Background image with rotation */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Laboratorio de bioseguridad GEMAS" className="w-full h-full object-cover" />
+        <div className="relative w-full h-full overflow-hidden">
+          {heroImages.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Personal de bioseguridad GEMAS ${index + 1}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          ))}
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60"></div>
       </div>
 
