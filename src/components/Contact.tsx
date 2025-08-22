@@ -37,8 +37,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      info: 'info@gemasing.com',
-      action: 'mailto:info@gemasing.com',
+      info: 'contacto@gemasing.com',
+      action: 'mailto:contacto@gemasing.com',
     },
     {
       icon: MapPin,
