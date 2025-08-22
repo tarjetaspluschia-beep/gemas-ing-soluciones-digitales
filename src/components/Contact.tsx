@@ -55,9 +55,11 @@ const Contact = () => {
   ];
 
   const handleWhatsApp = () => {
-    const message = encodeURIComponent(
-      `Hola, me gustaría obtener más información sobre los servicios de GEMAS Ingeniería:\n\nNombre: ${formData.name}\nEmpresa: ${formData.company}\nEmail: ${formData.email}\nTeléfono: ${formData.phone}\n\nMensaje: ${formData.message}`
-    );
+    const baseMessage = 'Hola, estás comunicado con Gemas Ingeniería, cuéntame como te puedo ayudar....';
+    const formInfo = formData.name || formData.company || formData.email || formData.phone || formData.message
+      ? `\n\nInformación del formulario:\nNombre: ${formData.name}\nEmpresa: ${formData.company}\nEmail: ${formData.email}\nTeléfono: ${formData.phone}\nMensaje: ${formData.message}`
+      : '';
+    const message = encodeURIComponent(baseMessage + formInfo);
     window.open(`https://wa.me/573112205499?text=${message}`, '_blank');
   };
 

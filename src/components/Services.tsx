@@ -72,7 +72,11 @@ const Services = () => {
                       <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">{feature}</span>
                     </li>)}
                 </ul>
-                <Button variant="professional" className="w-full">
+                <Button 
+                  variant="professional" 
+                  className="w-full"
+                  onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+                >
                   <span className="mr-2">Solicitar información</span>
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -98,7 +102,15 @@ const Services = () => {
             <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto leading-relaxed">
               Contacta nuestro equipo técnico especializado para recibir una consulta gratuita y personalizada
             </p>
-            <Button variant="cta" size="lg" className="px-12 py-4 text-lg bg-[#2bb22b]">
+            <Button 
+              variant="cta" 
+              size="lg" 
+              className="px-12 py-4 text-lg bg-[#2bb22b]"
+              onClick={() => {
+                const message = encodeURIComponent('Hola, estás comunicado con Gemas Ingeniería, cuéntame como te puedo ayudar....');
+                window.open(`https://wa.me/573112205499?text=${message}`, '_blank');
+              }}
+            >
               <span className="mr-3">Consulta gratuita</span>
               <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
