@@ -1,7 +1,32 @@
-import React from 'react';
-import { Award, Users, Target, Heart } from 'lucide-react';
-import teamImage from '@/assets/team-gemas.jpg';
+import React, { useState, useEffect } from 'react';
+import { Award, Users, Target, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
+
 const About = () => {
+  const aboutImages = [
+    '/lovable-uploads/10d315ad-746d-4023-8c4f-b13f1fbd9917.png',
+    '/lovable-uploads/29974db3-0230-44ef-83bb-728f26b41c8a.png',
+    '/lovable-uploads/21f6f2d8-1f46-4842-9414-016352ad200c.png',
+    '/lovable-uploads/5a2d4dc0-08c1-465b-b6a5-eada986e03ba.png'
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % aboutImages.length);
+    }, 4000);
+    
+    return () => clearInterval(interval);
+  }, [aboutImages.length]);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % aboutImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + aboutImages.length) % aboutImages.length);
+  };
+
   const values = [{
     icon: Target,
     title: 'Misión',
@@ -15,7 +40,9 @@ const About = () => {
     title: 'Valores',
     description: 'Compromiso, responsabilidad, innovación y respeto por el medio ambiente en cada proyecto.'
   }];
+  
   const certifications = ['Ingeniera de Alimentos certificada', 'Registro ICA para control de plagas', 'Certificación en sistemas HACCP', 'Empresa SAS BIC registrada'];
+  
   return <section id="nosotros" className="py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -33,9 +60,48 @@ const About = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-          {/* Image */}
+          {/* Image Carousel */}
           <div className="relative">
-            <img src={teamImage} alt="Equipo profesional GEMAS Ingeniería" className="rounded-2xl shadow-lg w-full h-[400px] object-cover" />
+            <div className="relative w-full h-[400px] overflow-hidden rounded-2xl shadow-lg">
+              {aboutImages.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Equipo profesional GEMAS ${index + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
+              
+              {/* Navigation buttons */}
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full transition-colors"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full transition-colors"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+              
+              {/* Dots indicator */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {aboutImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      index === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+            
             <div className="absolute -bottom-6 -right-6 bg-accent text-accent-foreground p-6 rounded-xl shadow-lg">
               <div className="text-2xl font-bold">SAS BIC</div>
               <div className="text-sm">Beneficio Social</div>
@@ -83,4 +149,5 @@ const About = () => {
       </div>
     </section>;
 };
+
 export default About;
