@@ -108,7 +108,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/60 text-sm">
-              © 2024 GEMAS Ingeniería SAS BIC. Todos los derechos reservados.
+              © 2025 GEMAS Ingeniería SAS BIC. Todos los derechos reservados.
             </p>
             
             <div className="flex gap-6 text-sm">
