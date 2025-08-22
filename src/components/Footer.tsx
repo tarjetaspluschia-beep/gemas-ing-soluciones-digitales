@@ -1,31 +1,37 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
-
 const Footer = () => {
-  const quickLinks = [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Quiénes somos', href: '#nosotros' },
-    { name: 'Servicios', href: '#servicios' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contacto', href: '#contacto' },
-  ];
-
-  const services = [
-    'Control de plagas',
-    'Bioseguridad',
-    'Desinfección',
-    'Constancia sanitaria',
-    'Asesoría técnica',
-  ];
-
-  const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  ];
-
-  return (
-    <footer className="bg-primary text-primary-foreground">
+  const quickLinks = [{
+    name: 'Inicio',
+    href: '#inicio'
+  }, {
+    name: 'Quiénes somos',
+    href: '#nosotros'
+  }, {
+    name: 'Servicios',
+    href: '#servicios'
+  }, {
+    name: 'Blog',
+    href: '#blog'
+  }, {
+    name: 'Contacto',
+    href: '#contacto'
+  }];
+  const services = ['Control de plagas', 'Bioseguridad', 'Desinfección', 'Constancia sanitaria', 'Asesoría técnica'];
+  const socialLinks = [{
+    icon: Facebook,
+    href: '#',
+    label: 'Facebook'
+  }, {
+    icon: Instagram,
+    href: '#',
+    label: 'Instagram'
+  }, {
+    icon: Linkedin,
+    href: '#',
+    label: 'LinkedIn'
+  }];
+  return <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         {/* Main Footer */}
         <div className="py-16">
@@ -44,16 +50,9 @@ const Footer = () => {
               
               {/* Social Links */}
               <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors duration-200"
-                  >
+                {socialLinks.map((social, index) => <a key={index} href={social.href} aria-label={social.label} className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors duration-200">
                     <social.icon className="h-5 w-5" />
-                  </a>
-                ))}
+                  </a>)}
               </div>
             </div>
 
@@ -61,15 +60,9 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Enlaces rápidos</h4>
               <nav className="space-y-3">
-                {quickLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.href}
-                    className="block text-primary-foreground/80 hover:text-accent transition-colors duration-200"
-                  >
+                {quickLinks.map((link, index) => <a key={index} href={link.href} className="block text-primary-foreground/80 hover:text-accent transition-colors duration-200">
                     {link.name}
-                  </a>
-                ))}
+                  </a>)}
               </nav>
             </div>
 
@@ -77,15 +70,9 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Servicios</h4>
               <nav className="space-y-3">
-                {services.map((service, index) => (
-                  <a
-                    key={index}
-                    href="#servicios"
-                    className="block text-primary-foreground/80 hover:text-accent transition-colors duration-200"
-                  >
+                {services.map((service, index) => <a key={index} href="#servicios" className="block text-primary-foreground/80 hover:text-accent transition-colors duration-200">
                     {service}
-                  </a>
-                ))}
+                  </a>)}
               </nav>
             </div>
 
@@ -105,22 +92,12 @@ const Footer = () => {
                 
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-accent" />
-                  <a
-                    href="tel:+573501234567"
-                    className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
-                  >
-                    +57 350 123 4567
-                  </a>
+                  <a href="tel:+573501234567" className="text-primary-foreground/80 hover:text-accent transition-colors duration-200">+57 3112205449</a>
                 </div>
                 
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-accent" />
-                  <a
-                    href="mailto:info@gemasing.com"
-                    className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
-                  >
-                    info@gemasing.com
-                  </a>
+                  <a href="mailto:info@gemasing.com" className="text-primary-foreground/80 hover:text-accent transition-colors duration-200">contacto@gemasing.com</a>
                 </div>
               </div>
             </div>
@@ -135,24 +112,16 @@ const Footer = () => {
             </p>
             
             <div className="flex gap-6 text-sm">
-              <a
-                href="#"
-                className="text-primary-foreground/60 hover:text-accent transition-colors duration-200"
-              >
+              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors duration-200">
                 Política de privacidad
               </a>
-              <a
-                href="#"
-                className="text-primary-foreground/60 hover:text-accent transition-colors duration-200"
-              >
+              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors duration-200">
                 Términos de servicio
               </a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
