@@ -60,7 +60,7 @@ const Contact = () => {
       ? `\n\nInformación del formulario:\nNombre: ${formData.name}\nEmpresa: ${formData.company}\nEmail: ${formData.email}\nTeléfono: ${formData.phone}\nMensaje: ${formData.message}`
       : '';
     const message = encodeURIComponent(baseMessage + formInfo);
-    window.open(`https://wa.me/573112205499?text=${message}`, '_blank');
+    window.open(`https://wa.me/573112295499?text=${message}`, '_blank');
   };
 
   return (

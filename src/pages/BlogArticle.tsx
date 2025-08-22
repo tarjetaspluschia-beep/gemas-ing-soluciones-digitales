@@ -29,7 +29,7 @@ const BlogArticle = () => {
 
   const handleWhatsAppContact = () => {
     const message = encodeURIComponent('Hola, estás comunicado con Gemas Ingeniería, cuéntame como te puedo ayudar....');
-    window.open(`https://wa.me/573112205499?text=${message}`, '_blank');
+    window.open(`https://wa.me/573112295499?text=${message}`, '_blank');
   };
 
   const handleScrollToContact = () => {
