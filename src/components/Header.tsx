@@ -1,24 +1,40 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigation = [{
-    name: 'Inicio',
-    href: '#inicio'
-  }, {
-    name: 'Quiénes somos',
-    href: '#nosotros'
-  }, {
-    name: 'Servicios',
-    href: '#servicios'
-  }, {
-    name: 'Blog',
-    href: '#blog'
-  }, {
-    name: 'Contacto',
-    href: '#contacto'
-  }];
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  
+  const navigation = [
+    {
+      name: 'Inicio',
+      href: isHomePage ? '#inicio' : '/#inicio',
+      isExternal: !isHomePage
+    }, 
+    {
+      name: 'Quiénes somos',
+      href: isHomePage ? '#nosotros' : '/#nosotros',
+      isExternal: !isHomePage
+    }, 
+    {
+      name: 'Servicios',
+      href: isHomePage ? '#servicios' : '/#servicios',
+      isExternal: !isHomePage
+    }, 
+    {
+      name: 'Blog',
+      href: '/blog',
+      isExternal: false,
+      isRoute: true
+    }, 
+    {
+      name: 'Contacto',
+      href: isHomePage ? '#contacto' : '/#contacto',
+      isExternal: !isHomePage
+    }
+  ];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
       <div className="container mx-auto px-4">
         {/* Top bar with contact info */}
@@ -39,14 +55,32 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/lovable-uploads/dc81770e-e27e-4c58-a256-9a988e6fc8db.png" alt="GEMAS Ingeniería SAS BIC" className="h-20 w-auto" />
+            <Link to="/">
+              <img src="/lovable-uploads/dc81770e-e27e-4c58-a256-9a988e6fc8db.png" alt="GEMAS Ingeniería SAS BIC" className="h-20 w-auto" />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navigation.map(item => <a key={item.name} href={item.href} className="text-foreground hover:text-primary transition-colors duration-200 font-medium">
-                {item.name}
-              </a>)}
+            {navigation.map(item => 
+              item.isRoute ? (
+                <Link 
+                  key={item.name} 
+                  to={item.href} 
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a 
+                  key={item.name} 
+                  href={item.href} 
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </a>
+              )
+            )}
           </nav>
 
           {/* CTA Button */}
@@ -70,16 +104,27 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t bg-background">
             <nav className="flex flex-col gap-4">
-              {navigation.map(item => (
-                <a 
-                  key={item.name} 
-                  href={item.href} 
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium py-2 px-2 rounded-md hover:bg-accent"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
+              {navigation.map(item => 
+                item.isRoute ? (
+                  <Link 
+                    key={item.name} 
+                    to={item.href} 
+                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium py-2 px-2 rounded-md hover:bg-accent"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a 
+                    key={item.name} 
+                    href={item.href} 
+                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium py-2 px-2 rounded-md hover:bg-accent"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
+              )}
               <Button 
                 variant="cta" 
                 className="mt-4 w-full bg-yellow-600 hover:bg-yellow-500 text-slate-50"
