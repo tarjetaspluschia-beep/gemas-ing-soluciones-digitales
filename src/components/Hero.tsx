@@ -5,11 +5,10 @@ const Hero = () => {
   const benefits = ['Soluciones técnicas certificadas', 'Atención inmediata en Casanare', 'Resultados garantizados'];
   
   const heroImages = [
-    '/lovable-uploads/345111ec-6696-4d67-a406-101a0e91c7d0.png',
-    '/lovable-uploads/85399eee-5fb2-479c-a257-5c6acc1320bc.png',
-    '/lovable-uploads/66c0334b-6ecd-4ee3-b177-e3bbd4fd7f28.png',
-    '/lovable-uploads/58d8bc2a-e8a6-4022-9052-851aa503fd89.png',
-    '/lovable-uploads/32914c0b-5a6f-4733-a29e-ebba6f445eb4.png'
+    '/lovable-uploads/10d315ad-746d-4023-8c4f-b13f1fbd9917.png',
+    '/lovable-uploads/29974db3-0230-44ef-83bb-728f26b41c8a.png',
+    '/lovable-uploads/21f6f2d8-1f46-4842-9414-016352ad200c.png',
+    '/lovable-uploads/5a2d4dc0-08c1-465b-b6a5-eada986e03ba.png'
   ];
   
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
