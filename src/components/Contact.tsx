@@ -43,7 +43,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Ubicación',
-      info: 'Tauramena, Casanare, Colombia',
+      info: 'Carrera 16 No 3-29 Tauramena, Casanare',
       action: '#',
     },
     {
