@@ -108,7 +108,7 @@ const Services = () => {
               className="px-12 py-4 text-lg bg-[#2bb22b]"
               onClick={() => {
                 const message = encodeURIComponent('Hola, estás comunicado con Gemas Ingeniería, cuéntame como te puedo ayudar....');
-                window.open(`https://wa.me/573112295499?text=${message}`, '_blank');
+                window.open(`https://wa.me/573112295449?text=${message}`, '_blank');
               }}
             >
               <span className="mr-3">Consulta gratuita</span>
