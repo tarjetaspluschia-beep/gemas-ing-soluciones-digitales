@@ -56,7 +56,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/">
-              <img src="/lovable-uploads/80869d03-bd99-401a-85cf-140dc622acb0.png" alt="GEMAS Ingeniería SAS BIC" className="h-20 w-auto" />
+              <img src="/lovable-uploads/7dc5fffa-75a1-4879-8189-ec0d9a9f1581.png" alt="GEMAS Ingeniería SAS BIC" className="h-20 w-auto" />
             </Link>
           </div>
 
