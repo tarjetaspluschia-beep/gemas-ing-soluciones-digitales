@@ -55,7 +55,16 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" className="group">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="group"
+                onClick={() => {
+                  const phoneNumber = '+573112295449';
+                  const message = encodeURIComponent('Hola, estás comunicado con Gemas Ingeniería, cuéntame como te puedo ayudar....');
+                  window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+                }}
+              >
                 Contáctanos ahora
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
