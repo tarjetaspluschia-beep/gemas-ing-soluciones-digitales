@@ -3,38 +3,20 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
 const Hero = () => {
   const benefits = ['Soluciones técnicas certificadas', 'Atención inmediata en Casanare', 'Resultados garantizados'];
-  
-  const heroImages = [
-    '/lovable-uploads/ee35565a-6c74-4fa8-9636-718820907fe5.png',
-    '/lovable-uploads/23ee7c69-5820-4b15-99ea-b45e8bf7214f.png',
-    '/lovable-uploads/995bfbca-b7c3-4b86-bc1b-5354f9f67db4.png',
-    '/lovable-uploads/bc43e198-0322-49e4-b7c4-ced0a459d530.png',
-    '/lovable-uploads/242959eb-eedb-4224-841f-89516416857f.png'
-  ];
-  
+  const heroImages = ['/lovable-uploads/345111ec-6696-4d67-a406-101a0e91c7d0.png', '/lovable-uploads/85399eee-5fb2-479c-a257-5c6acc1320bc.png', '/lovable-uploads/66c0334b-6ecd-4ee3-b177-e3bbd4fd7f28.png', '/lovable-uploads/58d8bc2a-e8a6-4022-9052-851aa503fd89.png', '/lovable-uploads/32914c0b-5a6f-4733-a29e-ebba6f445eb4.png'];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+      setCurrentImageIndex(prevIndex => (prevIndex + 1) % heroImages.length);
     }, 4000); // Cambia imagen cada 4 segundos
-    
+
     return () => clearInterval(interval);
   }, [heroImages.length]);
   return <section id="inicio" className="relative min-h-screen flex items-center pt-20">
       {/* Background image with rotation */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full overflow-hidden">
-          {heroImages.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Personal de bioseguridad GEMAS ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-              }`}
-            />
-          ))}
+          {heroImages.map((image, index) => <img key={index} src={image} alt={`Personal de bioseguridad GEMAS ${index + 1}`} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`} />)}
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60"></div>
       </div>
@@ -76,11 +58,9 @@ const Hero = () => {
                 Contáctanos ahora
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
-              >
+              <Button variant="outline" size="lg" onClick={() => document.getElementById('servicios')?.scrollIntoView({
+              behavior: 'smooth'
+            })}>
                 Ver nuestros servicios
               </Button>
             </div>
@@ -92,13 +72,10 @@ const Hero = () => {
                 <div className="text-sm text-muted-foreground">Años de experiencia</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-secondary">50+</div>
+                <div className="text-2xl font-bold text-secondary">200+</div>
                 <div className="text-sm text-muted-foreground">Clientes atendidos</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent">24/7</div>
-                <div className="text-sm text-muted-foreground">Soporte técnico</div>
-              </div>
+              
             </div>
           </div>
         </div>
