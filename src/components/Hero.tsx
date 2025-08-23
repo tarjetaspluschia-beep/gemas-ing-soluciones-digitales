@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
 const Hero = () => {
   const benefits = ['Soluciones técnicas certificadas', 'Atención inmediata en Casanare', 'Resultados garantizados'];
-  const heroImages = ['/lovable-uploads/345111ec-6696-4d67-a406-101a0e91c7d0.png', '/lovable-uploads/85399eee-5fb2-479c-a257-5c6acc1320bc.png', '/lovable-uploads/66c0334b-6ecd-4ee3-b177-e3bbd4fd7f28.png', '/lovable-uploads/58d8bc2a-e8a6-4022-9052-851aa503fd89.png', '/lovable-uploads/32914c0b-5a6f-4733-a29e-ebba6f445eb4.png'];
+  const heroImages = ['/lovable-uploads/995bfbca-b7c3-4b86-bc1b-5354f9f67db4.png', '/lovable-uploads/bc43e198-0322-49e4-b7c4-ced0a459d530.png', '/lovable-uploads/242959eb-eedb-4224-841f-89516416857f.png', '/lovable-uploads/ee35565a-6c74-4fa8-9636-718820907fe5.png', '/lovable-uploads/23ee7c69-5820-4b15-99ea-b45e8bf7214f.png'];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
