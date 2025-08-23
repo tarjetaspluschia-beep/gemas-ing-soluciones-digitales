@@ -36,7 +36,7 @@ const Hero = () => {
                 Soluciones integrales en{' '}
                 <span className="text-primary">bioseguridad</span>,{' '}
                 <span className="text-secondary">inocuidad</span> y{' '}
-                <span className="text-accent">control de plagas</span>
+                <span className="text-accent">control de plagas, servicio de fumigación y desinfección</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
                 Protegemos tu negocio en Tauramena y Casanare con experiencia técnica, 
