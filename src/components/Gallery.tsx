@@ -56,13 +56,6 @@ const Gallery = () => {
       description: "Protocolos de bioseguridad en instituciones gubernamentales",
       category: "Bioseguridad",
       imageUrl: "/lovable-uploads/a66ebcf2-b092-44e3-af1b-dec2f734c6f4.png"
-    },
-    {
-      id: 7,
-      title: "Sociedad BIC - Empresa con propósito",
-      description: "Certificación como Sociedad de Beneficio e Interés Colectivo",
-      category: "Certificaciones",
-      imageUrl: "/lovable-uploads/be71bece-2f93-4146-982e-8c106c6ace2f.png"
     }
   ];
 
