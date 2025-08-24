@@ -1,24 +1,40 @@
 import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
+
 const Footer = () => {
-  const quickLinks = [{
-    name: 'Inicio',
-    href: '#inicio'
-  }, {
-    name: 'Quiénes somos',
-    href: '#nosotros'
-  }, {
-    name: 'Servicios',
-    href: '#servicios'
-  }, {
-    name: 'Blog',
-    href: '#blog'
-  }, {
-    name: 'Contacto',
-    href: '#contacto'
-  }];
-  const services = ['Control de plagas', 'Bioseguridad', 'Desinfección', 'Constancia sanitaria', 'Asesoría técnica'];
-  return <footer className="bg-primary text-primary-foreground">
+  const quickLinks = [
+    {
+      name: 'Inicio',
+      href: '#inicio'
+    },
+    {
+      name: 'Quiénes somos',
+      href: '#nosotros'
+    },
+    {
+      name: 'Servicios',
+      href: '#servicios'
+    },
+    {
+      name: 'Blog',
+      href: '#blog'
+    },
+    {
+      name: 'Contacto',
+      href: '#contacto'
+    }
+  ];
+
+  const services = [
+    'Control de plagas',
+    'Bioseguridad',
+    'Desinfección',
+    'Constancia sanitaria',
+    'Asesoría técnica'
+  ];
+
+  return (
+    <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         {/* Main Footer */}
         <div className="py-16">
@@ -40,9 +56,15 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Enlaces rápidos</h4>
               <nav className="space-y-3">
-                {quickLinks.map((link, index) => <a key={index} href={link.href} className="block text-primary-foreground/80 hover:text-accent transition-colors duration-200">
+                {quickLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    className="block text-primary-foreground/80 hover:text-accent transition-colors duration-200"
+                  >
                     {link.name}
-                  </a>)}
+                  </a>
+                ))}
               </nav>
             </div>
 
@@ -50,9 +72,15 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Servicios</h4>
               <nav className="space-y-3">
-                {services.map((service, index) => <a key={index} href="#servicios" className="block text-primary-foreground/80 hover:text-accent transition-colors duration-200">
+                {services.map((service, index) => (
+                  <a
+                    key={index}
+                    href="#servicios"
+                    className="block text-primary-foreground/80 hover:text-accent transition-colors duration-200"
+                  >
                     {service}
-                  </a>)}
+                  </a>
+                ))}
               </nav>
             </div>
 
@@ -72,12 +100,22 @@ const Footer = () => {
                 
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-accent" />
-                  <a href="tel:+573112295449" className="text-primary-foreground/80 hover:text-accent transition-colors duration-200">+57 3112295449</a>
+                  <a
+                    href="tel:+573112295449"
+                    className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
+                  >
+                    +57 3112295449
+                  </a>
                 </div>
                 
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-accent" />
-                  <a href="mailto:info@gemasing.com" className="text-primary-foreground/80 hover:text-accent transition-colors duration-200">contacto@gemasing.com</a>
+                  <a
+                    href="mailto:contacto@gemasing.com"
+                    className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
+                  >
+                    contacto@gemasing.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -92,16 +130,24 @@ const Footer = () => {
             </p>
             
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors duration-200">
+              <a
+                href="#"
+                className="text-primary-foreground/60 hover:text-accent transition-colors duration-200"
+              >
                 Política de privacidad
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors duration-200">
+              <a
+                href="#"
+                className="text-primary-foreground/60 hover:text-accent transition-colors duration-200"
+              >
                 Términos de servicio
               </a>
             </div>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
