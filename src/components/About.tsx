@@ -28,7 +28,7 @@ const About = () => {
     title: 'Valores',
     description: 'Compromiso, responsabilidad, innovación y respeto por el medio ambiente en cada proyecto.'
   }];
-  const certifications = ['Ingeniera de Alimentos', 'Concepto favorable secretaria salud del gobierno de Casanare', 'Certificación en sistemas HACCP', 'Empresa SAS BIC registrada'];
+  const certifications = ['Ingeniera de Alimentos', 'Concepto favorable secretaria salud del gobierno de Casanare', 'Certificados en manejo integrado de plagas SENA', 'Empresa SAS BIC registrada'];
   return <section id="nosotros" className="py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
