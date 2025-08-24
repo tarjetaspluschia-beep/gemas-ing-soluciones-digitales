@@ -215,7 +215,7 @@ const Contact = () => {
             <Card className="border-0 shadow-md">
               <CardContent className="p-0">
                 <a 
-                  href="https://share.google/DzIlrTL97l4N8e42t" 
+                  href="https://maps.app.goo.gl/zAtj1oAibohkAJoP7" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block bg-muted h-64 rounded-lg hover:bg-muted/80 transition-colors cursor-pointer"
