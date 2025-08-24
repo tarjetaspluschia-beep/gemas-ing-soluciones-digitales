@@ -63,6 +63,15 @@ const About = () => {
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                 {aboutImages.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-2 h-2 rounded-full transition-colors ${index === currentImageIndex ? 'bg-white' : 'bg-white/50'}`} />)}
               </div>
+
+              {/* SOCIEDAD BIC Logo */}
+              <div className="absolute bottom-4 right-4">
+                <img 
+                  src="/lovable-uploads/405f82bd-eca2-4bc7-91c3-52a1912c8648.png" 
+                  alt="Sociedad BIC" 
+                  className="h-12 w-auto opacity-90"
+                />
+              </div>
             </div>
             
             
