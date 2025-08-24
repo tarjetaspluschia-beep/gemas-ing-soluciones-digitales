@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 const Footer = () => {
   const quickLinks = [{
     name: 'Inicio',
@@ -18,19 +18,6 @@ const Footer = () => {
     href: '#contacto'
   }];
   const services = ['Control de plagas', 'Bioseguridad', 'Desinfección', 'Constancia sanitaria', 'Asesoría técnica'];
-  const socialLinks = [{
-    icon: Facebook,
-    href: '#',
-    label: 'Facebook'
-  }, {
-    icon: Instagram,
-    href: '#',
-    label: 'Instagram'
-  }, {
-    icon: Linkedin,
-    href: '#',
-    label: 'LinkedIn'
-  }];
   return <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         {/* Main Footer */}
@@ -46,13 +33,6 @@ const Footer = () => {
                   Soluciones integrales en bioseguridad, inocuidad y control de plagas. 
                   Empresa SAS BIC comprometida con el impacto social.
                 </p>
-              </div>
-              
-              {/* Social Links */}
-              <div className="flex gap-4">
-                {socialLinks.map((social, index) => <a key={index} href={social.href} aria-label={social.label} className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors duration-200">
-                    <social.icon className="h-5 w-5" />
-                  </a>)}
               </div>
             </div>
 
