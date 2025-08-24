@@ -7,7 +7,7 @@ const Services = () => {
     icon: Shield,
     title: 'Bioseguridad',
     description: 'Protocolos completos de bioseguridad para empresas e instituciones',
-    features: ['Auditorías de bioseguridad', 'Capacitación del personal', 'Protocolos personalizados']
+    features: ['Capacitación del personal', 'Protocolos personalizados']
   }, {
     icon: Droplets,
     title: 'Desinfección',
@@ -17,12 +17,12 @@ const Services = () => {
     icon: Bug,
     title: 'Control de Plagas',
     description: 'Manejo integral de plagas urbanas e industriales',
-    features: ['Control de insectos', 'Manejo de roedores', 'Planes de monitoreo']
+    features: ['Control de insectos rastreros y voladores', 'Control de roedores', 'Planes de monitoreo']
   }, {
     icon: Bird,
-    title: 'Control de Aves y Murciélagos',
+    title: 'Control de Aves, Murciélagos y Ofidios',
     description: 'Soluciones especializadas para control de fauna',
-    features: ['Control humano', 'Sistemas de exclusión', 'Monitoreo continuo']
+    features: ['Control físico', 'Sistemas de exclusión', 'Monitoreo continuo']
   }, {
     icon: FileCheck,
     title: 'Constancia Sanitaria',
