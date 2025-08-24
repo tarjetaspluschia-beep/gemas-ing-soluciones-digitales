@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Shield, Droplets, Bug, Bird, FileCheck, Wrench } from 'lucide-react';
+import { Shield, Droplets, Bug, Bird, FileCheck, Wrench, ShoppingCart, SprayCanIcon } from 'lucide-react';
 const Services = () => {
   const services = [{
     icon: Shield,
@@ -33,6 +33,16 @@ const Services = () => {
     title: 'Asesoría Técnica',
     description: 'Consultoría especializada y programas de mantenimiento',
     features: ['Consultoría técnica', 'Programas preventivos', 'Soporte continuo']
+  }, {
+    icon: ShoppingCart,
+    title: 'Venta de productos de limpieza',
+    description: 'Productos especializados para higiene y desinfección',
+    features: ['Productos para la higiene y desinfección de las manos', 'Productos de limpieza y desinfección', 'Productos certificados']
+  }, {
+    icon: SprayCanIcon,
+    title: 'Fumigación',
+    description: 'Servicios profesionales de fumigación para control integral',
+    features: ['Fumigación residencial', 'Fumigación comercial', 'Tratamientos especializados']
   }];
   return <section id="servicios" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
