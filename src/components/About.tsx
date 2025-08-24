@@ -65,10 +65,7 @@ const About = () => {
               </div>
             </div>
             
-            <div className="absolute -bottom-6 -right-6 bg-accent text-accent-foreground p-6 rounded-xl shadow-lg">
-              <div className="text-2xl font-bold">SAS BIC</div>
-              <div className="text-sm">Beneficio Social</div>
-            </div>
+            
           </div>
 
           {/* Content */}
