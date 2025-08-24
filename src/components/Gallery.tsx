@@ -59,10 +59,10 @@ const Gallery = () => {
     },
     {
       id: 7,
-      title: "Trabajo especializado",
-      description: "Personal técnico certificado ejecutando protocolos de seguridad",
-      category: "Servicios Especializados",
-      imageUrl: "/lovable-uploads/1e6038ca-ffdd-4df1-ad64-ed1d7f34b151.png"
+      title: "Sociedad BIC - Empresa con propósito",
+      description: "Certificación como Sociedad de Beneficio e Interés Colectivo",
+      category: "Certificaciones",
+      imageUrl: "/lovable-uploads/be71bece-2f93-4146-982e-8c106c6ace2f.png"
     }
   ];
 
@@ -73,7 +73,8 @@ const Gallery = () => {
       "Inocuidad Alimentaria": "bg-green-500/10 text-green-600 border-green-200",
       "Control de Plagas": "bg-red-500/10 text-red-600 border-red-200",
       "Bioseguridad": "bg-purple-500/10 text-purple-600 border-purple-200",
-      "Servicios Especializados": "bg-orange-500/10 text-orange-600 border-orange-200"
+      "Servicios Especializados": "bg-orange-500/10 text-orange-600 border-orange-200",
+      "Certificaciones": "bg-cyan-500/10 text-cyan-600 border-cyan-200"
     };
     return colors[category as keyof typeof colors] || "bg-gray-500/10 text-gray-600 border-gray-200";
   };
