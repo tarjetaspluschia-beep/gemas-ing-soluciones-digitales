@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="space-y-6">
               <div>
                 <h3 className="text-2xl font-bold mb-2">
-                  GEMAS <span className="text-accent">INGENIERÍA</span>
+                  GEMAS INGENIERIA SAS BIC
                 </h3>
                 <p className="text-primary-foreground/80 mb-4">
                   Soluciones integrales en bioseguridad, inocuidad y control de plagas. 

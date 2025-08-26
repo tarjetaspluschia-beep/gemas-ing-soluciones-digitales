@@ -16,7 +16,7 @@ const Services = () => {
   }, {
     icon: Bug,
     title: 'Control de Plagas',
-    description: 'Manejo integral de plagas urbanas e industriales',
+    description: 'Manejo Integral de plagas en áreas urbanas e industriales',
     features: ['Control de insectos rastreros y voladores', 'Control de roedores', 'Planes de monitoreo']
   }, {
     icon: Bird,
