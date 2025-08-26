@@ -27,6 +27,7 @@ const Footer = () => {
 
   const services = [
     'Control de plagas',
+    'Fumigación',
     'Bioseguridad',
     'Desinfección',
     'Constancia sanitaria',
