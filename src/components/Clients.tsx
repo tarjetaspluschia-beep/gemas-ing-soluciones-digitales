@@ -42,26 +42,6 @@ const Clients = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      quote: "GEMAS Ingeniería ha sido fundamental en mantener nuestros estándares de bioseguridad. Su profesionalismo y puntualidad son excepcionales.",
-      author: "María González",
-      position: "Gerente de Operaciones",
-      company: "Empresa Petrolera Regional",
-    },
-    {
-      quote: "El servicio de control de plagas que brindan es muy completo. Nos han ayudado a cumplir con todas las normativas sanitarias.",
-      author: "Dr. Carlos Rodríguez",
-      position: "Director Médico",
-      company: "Hospital San José",
-    },
-    {
-      quote: "Su equipo técnico es muy capacitado y siempre están disponibles para resolver cualquier situación. Los recomendamos ampliamente.",
-      author: "Ana Martínez",
-      position: "Administradora",
-      company: "Restaurante El Dorado",
-    },
-  ];
 
   return (
     <section className="py-20 bg-muted/30">
@@ -95,33 +75,6 @@ const Clients = () => {
           ))}
         </div>
 
-        {/* Testimonials */}
-        <div className="space-y-12">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Lo que dicen nuestros clientes</h3>
-            <p className="text-muted-foreground">
-              La confianza de nuestros clientes es nuestro mayor logro
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-0 shadow-md">
-                <CardContent className="p-6">
-                  <div className="mb-4">
-                    <div className="text-accent text-2xl mb-2">"</div>
-                    <p className="text-muted-foreground italic">{testimonial.quote}</p>
-                  </div>
-                  <div className="border-t pt-4">
-                    <div className="font-semibold">{testimonial.author}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.position}</div>
-                    <div className="text-sm text-primary font-medium">{testimonial.company}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
