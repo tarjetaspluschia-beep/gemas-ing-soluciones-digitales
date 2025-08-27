@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Award, Users, Target, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 const About = () => {
-  const aboutImages = ['/lovable-uploads/10d315ad-746d-4023-8c4f-b13f1fbd9917.png', '/lovable-uploads/29974db3-0230-44ef-83bb-728f26b41c8a.png', '/lovable-uploads/21f6f2d8-1f46-4842-9414-016352ad200c.png', '/lovable-uploads/5a2d4dc0-08c1-465b-b6a5-eada986e03ba.png', '/lovable-uploads/4d3da8e2-d925-458b-8ec8-b17d7f2955f2.png'];
+  const aboutImages = ['/lovable-uploads/1ea49417-d8fb-425e-9327-4b9fd33e3697.png', '/lovable-uploads/e428a8e8-5358-4fe7-9d6e-b52e0a6361e4.png', '/lovable-uploads/672315df-b5d0-48fd-8ca3-10a804239566.png', '/lovable-uploads/b3536e1d-25be-40cc-ade7-b77efa1f00c2.png', '/lovable-uploads/4d3da8e2-d925-458b-8ec8-b17d7f2955f2.png'];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
