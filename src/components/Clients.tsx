@@ -34,12 +34,6 @@ const Clients = () => {
       description: 'Alcaldías, juzgados, colegios',
       color: 'text-secondary',
     },
-    {
-      icon: Wheat,
-      title: 'Sector Agrícola',
-      description: 'Silos y negocios ganaderos',
-      color: 'text-accent',
-    },
   ];
 
 
