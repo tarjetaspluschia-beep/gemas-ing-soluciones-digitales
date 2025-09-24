@@ -17,10 +17,10 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      title: "Desinfección de oficinas",
-      description: "Personal especializado realizando protocolos de desinfección en espacios de oficina",
-      category: "Desinfección",
-      imageUrl: "/lovable-uploads/c8ba083d-f166-4df3-a7bb-3471457ef599.png"
+      title: "Desinfección en centros recreativos",
+      description: "Protocolos especializados de desinfección en áreas de juegos y espacios recreativos",
+      category: "Desinfección", 
+      imageUrl: "/lovable-uploads/new-disinfection-trampoline.jpg"
     },
     {
       id: 2,
