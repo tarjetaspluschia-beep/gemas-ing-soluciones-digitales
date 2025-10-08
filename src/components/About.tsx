@@ -104,8 +104,8 @@ const About = () => {
         {/* Values */}
         <div className="grid md:grid-cols-3 gap-8">
           {values.map((value, index) => <div key={index} className="text-center p-6 rounded-xl bg-accent-light border border-accent/20 shadow-sm">
-              <div className="mx-auto w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                <value.icon className="h-8 w-8 text-accent" />
+              <div className="mx-auto w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                <value.icon className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-3">{value.title}</h3>
               <p className="text-muted-foreground">{value.description}</p>
