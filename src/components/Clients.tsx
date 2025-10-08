@@ -57,7 +57,7 @@ const Clients = () => {
         {/* Sectors Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {sectors.map((sector, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-200 border-0 shadow-md">
+            <Card key={index} className="hover:shadow-lg transition-shadow duration-200 border-0 shadow-md bg-secondary-light">
               <CardContent className="p-6 text-center">
                 <div className="mx-auto w-16 h-16 bg-muted rounded-full flex items-center justify-center mb-4">
                   <sector.icon className={`h-8 w-8 ${sector.color}`} />
