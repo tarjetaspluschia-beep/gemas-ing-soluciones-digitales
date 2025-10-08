@@ -27,35 +27,21 @@ const Gallery = () => {
       title: "Servicios en sector petrolero",
       description: "Fumigación especializada en instalaciones petroleras de Casanare",
       category: "Sector Petrolero",
-      imageUrl: `/lovable-uploads/gallery-sector-petrolero-2025.jpg?t=${Date.now()}`
+      imageUrl: "/lovable-uploads/sector-petrolero-1.jpg"
     },
     {
       id: 3,
       title: "Sanitización en cocinas industriales",
       description: "Control de plagas y sanitización en áreas de preparación de alimentos",
       category: "Inocuidad Alimentaria",
-      imageUrl: `/lovable-uploads/gallery-cocina-industrial-2025.jpg?t=${Date.now()}`
+      imageUrl: "/lovable-uploads/cocina-industrial-1.jpg"
     },
     {
       id: 4,
       title: "Fumigación industrial",
       description: "Aplicación de tratamientos especializados en zonas industriales",
       category: "Control de Plagas",
-      imageUrl: `/lovable-uploads/gallery-fumigacion-industrial-2025.jpg?t=${Date.now()}`
-    },
-    {
-      id: 5,
-      title: "Fumigación urbana",
-      description: "Servicios de control de plagas en áreas urbanas y residenciales",
-      category: "Control de Plagas",
-      imageUrl: "/lovable-uploads/7d32bb3d-eb05-423c-9f48-f27dc3988914.png"
-    },
-    {
-      id: 6,
-      title: "Desinfección institucional",
-      description: "Protocolos de bioseguridad en instituciones gubernamentales",
-      category: "Bioseguridad",
-      imageUrl: "/lovable-uploads/a66ebcf2-b092-44e3-af1b-dec2f734c6f4.png"
+      imageUrl: "/lovable-uploads/fumigacion-industrial-1.jpg"
     }
   ];
 
