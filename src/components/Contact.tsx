@@ -186,7 +186,7 @@ const Contact = () => {
             {/* Contact Cards */}
             <div className="grid gap-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow bg-secondary-light/20">
+                <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow bg-secondary-light/10">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center">
