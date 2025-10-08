@@ -24,24 +24,45 @@ const Gallery = () => {
     },
     {
       id: 2,
-      title: "Servicios en sector petrolero",
-      description: "Fumigación especializada en instalaciones petroleras de Casanare",
-      category: "Sector Petrolero",
-      imageUrl: "/lovable-uploads/sector-petrolero-1.jpg"
+      title: "Sanitización en cocinas industriales",
+      description: "Control de plagas y desinfección especializada en áreas de preparación de alimentos",
+      category: "Inocuidad Alimentaria",
+      imageUrl: "/lovable-uploads/gallery-cocina-industrial-new.jpg"
     },
     {
       id: 3,
-      title: "Sanitización en cocinas industriales",
-      description: "Control de plagas y sanitización en áreas de preparación de alimentos",
-      category: "Inocuidad Alimentaria",
-      imageUrl: "/lovable-uploads/cocina-industrial-1.jpg"
+      title: "Fumigación industrial en altura",
+      description: "Servicios especializados de fumigación en instalaciones industriales de gran altura",
+      category: "Control de Plagas",
+      imageUrl: "/lovable-uploads/gallery-fumigacion-industrial-new.jpg"
     },
     {
       id: 4,
-      title: "Fumigación industrial",
-      description: "Aplicación de tratamientos especializados en zonas industriales",
+      title: "Bioseguridad en sector petrolero",
+      description: "Servicios de desinfección y control sanitario en instalaciones petroleras",
+      category: "Sector Petrolero",
+      imageUrl: "/lovable-uploads/gallery-sector-petrolero-new.jpg"
+    },
+    {
+      id: 5,
+      title: "Control de plagas en campo petrolero",
+      description: "Fumigación especializada en áreas operativas del sector petrolero",
+      category: "Sector Petrolero",
+      imageUrl: "/lovable-uploads/gallery-petrolero-campo.jpg"
+    },
+    {
+      id: 6,
+      title: "Desinfección en plantas industriales",
+      description: "Protocolos de bioseguridad y control de plagas en plantas de producción",
       category: "Control de Plagas",
-      imageUrl: "/lovable-uploads/fumigacion-industrial-1.jpg"
+      imageUrl: "/lovable-uploads/gallery-fumigacion-planta.jpg"
+    },
+    {
+      id: 7,
+      title: "Fumigación comercial",
+      description: "Servicios de control de plagas en establecimientos comerciales y droguerías",
+      category: "Control de Plagas",
+      imageUrl: "/lovable-uploads/gallery-fumigacion-comercial.jpg"
     }
   ];
 
