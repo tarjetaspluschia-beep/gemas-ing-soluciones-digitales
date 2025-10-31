@@ -13,7 +13,7 @@ const Clients = () => {
     {
       icon: Hospital,
       title: 'Sector Salud',
-      description: 'Hospitales, clínicas y farmacias',
+      description: 'Hospitales, clínicas, consultorios y farmacias',
       color: 'text-secondary',
     },
     {
@@ -31,7 +31,7 @@ const Clients = () => {
     {
       icon: MapPin,
       title: 'Instituciones públicas',
-      description: 'Alcaldías, juzgados, colegios',
+      description: 'Alcaldías, juzgados, instituciones educativas',
       color: 'text-secondary',
     },
   ];
