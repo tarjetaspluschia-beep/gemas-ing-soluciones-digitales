@@ -205,7 +205,7 @@ const Gallery = () => {
               Contamos con el equipo y la experiencia para atender las necesidades específicas de tu empresa.
             </p>
             <a
-              href="https://wa.me/573003456789?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20bioseguridad"
+              href="https://wa.me/573112295449?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20bioseguridad"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-accent text-accent-foreground px-8 py-3 rounded-full font-medium hover:bg-accent-hover transition-colors duration-200"
