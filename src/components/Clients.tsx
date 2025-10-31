@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Building2, Hospital, UtensilsCrossed, Factory, MapPin, Wheat } from 'lucide-react';
+import { Building2, Hospital, UtensilsCrossed, Factory, MapPin, Wheat, Plane, Heart } from 'lucide-react';
 
 const Clients = () => {
   const sectors = [
@@ -33,6 +33,18 @@ const Clients = () => {
       title: 'Instituciones públicas',
       description: 'Alcaldías, juzgados, colegios',
       color: 'text-secondary',
+    },
+    {
+      icon: Plane,
+      title: 'Sector Turismo',
+      description: 'Hoteles, resorts y destinos turísticos',
+      color: 'text-accent',
+    },
+    {
+      icon: Heart,
+      title: 'Sector Salud Animal',
+      description: 'Agropecuarias, clínicas veterinarias y veterinarias',
+      color: 'text-primary',
     },
   ];
 
