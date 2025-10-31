@@ -85,7 +85,14 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="lg">
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => {
+                const message = encodeURIComponent('Hola, estás comunicado con Gemas Ingeniería, cuéntame como te puedo ayudar....');
+                window.open(`https://wa.me/573112295449?text=${message}`, '_blank');
+              }}
+            >
               Solicitar asesoría
             </Button>
           </div>
@@ -128,7 +135,11 @@ const Header = () => {
               <Button 
                 variant="hero" 
                 className="mt-4 w-full"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  const message = encodeURIComponent('Hola, estás comunicado con Gemas Ingeniería, cuéntame como te puedo ayudar....');
+                  window.open(`https://wa.me/573112295449?text=${message}`, '_blank');
+                }}
               >
                 Solicitar asesoría
               </Button>
