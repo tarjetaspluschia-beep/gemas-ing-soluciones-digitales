@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Building2, Hospital, UtensilsCrossed, Factory, MapPin, Wheat, Plane, Heart } from 'lucide-react';
+import { Building2, Hospital, UtensilsCrossed, Factory, MapPin } from 'lucide-react';
 
 const Clients = () => {
   const sectors = [
@@ -34,18 +34,6 @@ const Clients = () => {
       description: 'Alcaldías, juzgados, colegios',
       color: 'text-secondary',
     },
-    {
-      icon: Plane,
-      title: 'Sector Turismo',
-      description: 'Hoteles, resorts y destinos turísticos',
-      color: 'text-accent',
-    },
-    {
-      icon: Heart,
-      title: 'Sector Salud Animal',
-      description: 'Agropecuarias, clínicas veterinarias y veterinarias',
-      color: 'text-primary',
-    },
   ];
 
 
@@ -62,7 +50,8 @@ const Clients = () => {
           </h2>
           <p className="text-xl text-muted-foreground">
             Trabajamos con empresas de diferentes sectores, adaptando nuestros servicios 
-            a las necesidades específicas de cada industria.
+            a las necesidades específicas de cada industria. Sector Turismo, Sector Salud Animal 
+            (Agropecuarias, Clínicas veterinarias y Veterinarias).
           </p>
         </div>
 
