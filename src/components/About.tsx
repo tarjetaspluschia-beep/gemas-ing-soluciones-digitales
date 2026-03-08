@@ -49,7 +49,7 @@ const About = () => {
           {/* Image Carousel */}
           <div className="relative">
             <div className="relative w-full h-[400px] overflow-hidden rounded-2xl shadow-lg">
-              {aboutImages.map((image, index) => <img key={index} src={image} alt={`Equipo profesional GEMAS ${index + 1}`} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`} />)}
+              {aboutImages.map((image, index) => <img key={index} src={image} alt={`Equipo profesional GEMAS ${index + 1}`} loading="lazy" decoding="async" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`} />)}
               
               {/* Navigation buttons */}
               <button onClick={prevImage} className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full transition-colors">
