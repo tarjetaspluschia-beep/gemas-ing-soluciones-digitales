@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import SEOHead from '@/components/SEOHead';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Calendar, User } from 'lucide-react';
@@ -21,6 +22,11 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Blog - GEMAS Ingeniería | Bioseguridad y Control de Plagas"
+        description="Artículos especializados sobre bioseguridad, control de plagas, inocuidad alimentaria y soluciones de ingeniería en Casanare."
+        canonical="https://www.gemasing.com/blog"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
