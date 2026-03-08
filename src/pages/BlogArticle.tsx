@@ -40,6 +40,21 @@ const BlogArticle = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="5 Señales de Alerta de Infestación en tu Empresa | GEMAS Ingeniería"
+        description="Detecta a tiempo infestaciones de plagas en tu empresa. Aprende las 5 señales clave y cómo actuar para proteger tu negocio en Casanare."
+        canonical="https://www.gemasing.com/blog/senales-alerta-infestacion"
+        ogType="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "5 señales de alerta de infestación en tu empresa",
+          "author": { "@type": "Organization", "name": "GEMAS Ingeniería" },
+          "datePublished": "2024-08-22",
+          "publisher": { "@type": "Organization", "name": "GEMAS Ingeniería SAS BIC" },
+          "description": "Detectar a tiempo una posible infestación puede marcar la diferencia entre un incidente menor y un riesgo mayor."
+        }}
+      />
       <Header />
       <main className="pt-20">
         {/* Back Button */}
