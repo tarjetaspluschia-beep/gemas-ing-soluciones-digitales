@@ -32,8 +32,21 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      // Client-side validation
+      const parsed = contactSchema.safeParse(formData);
+      if (!parsed.success) {
+        const firstError = parsed.error.errors[0]?.message || "Datos inválidos";
+        toast({
+          title: "Error de validación",
+          description: firstError,
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
       const { error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData,
+        body: parsed.data,
       });
 
       if (error) throw error;
