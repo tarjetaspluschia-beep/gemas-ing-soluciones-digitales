@@ -6,6 +6,15 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
+import { z } from 'zod';
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "El nombre es requerido").max(100, "Máximo 100 caracteres"),
+  company: z.string().trim().max(100, "Máximo 100 caracteres").optional().or(z.literal('')),
+  email: z.string().trim().email("Email inválido").max(255),
+  phone: z.string().trim().min(1, "El teléfono es requerido").max(20, "Máximo 20 caracteres"),
+  message: z.string().trim().max(2000, "Máximo 2000 caracteres").optional().or(z.literal('')),
+});
 
 const Contact = () => {
   const [formData, setFormData] = useState({
