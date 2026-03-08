@@ -108,6 +108,7 @@ const Gallery = () => {
                       alt={image.title}
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                       loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                       <Maximize2 className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -159,6 +160,7 @@ const Gallery = () => {
                             alt={image.title}
                             className="w-full h-64 object-cover"
                             loading="lazy"
+                            decoding="async"
                           />
                           <Badge className={`absolute top-4 left-4 ${getCategoryColor(image.category)}`}>
                             {image.category}

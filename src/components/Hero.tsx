@@ -16,7 +16,7 @@ const Hero = () => {
       {/* Background image with rotation */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full overflow-hidden">
-          {heroImages.map((image, index) => <img key={index} src={image} alt={`Personal de bioseguridad GEMAS ${index + 1}`} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`} />)}
+          {heroImages.map((image, index) => <img key={index} src={image} alt={`Personal de bioseguridad GEMAS ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} decoding={index === 0 ? 'sync' : 'async'} fetchPriority={index === 0 ? 'high' : 'low'} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`} />)}
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60"></div>
       </div>
